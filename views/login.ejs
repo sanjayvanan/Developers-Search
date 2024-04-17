@@ -1,0 +1,47 @@
+  <body>
+    <div class="auth">
+      <div class="card">
+        <div class="auth__header text-center">
+          <a href="/">
+            <img src="images/icon.svg" alt="icon" />
+          </a>
+          <h3>Account Login</h3>
+          <p>Hello Developer, Welcome Back!</p>
+        </div>
+
+        <form action="/users/login" class="form auth__form" method="POST">
+          <!-- Input:Email -->
+          <div class="form__field">
+            <label for="formInput#text">Email: </label>
+            <input
+              class="input input--text"
+              id="formInput#text"
+              type="text"
+              name="email"
+              placeholder="Enter your email..."
+            />
+          </div>
+
+          <!-- Input:Password -->
+          <div class="form__field">
+            <label for="formInput#password">Password: </label>
+            <input
+              class="input input--password"
+              id="formInput#passowrd"
+              type="password"
+              name="password"
+              placeholder="••••••••"
+            />
+          </div>
+          <div class="auth__actions">
+            <input class="btn btn--sub btn--lg" type="submit" value="Log In" />
+            <a href="forgetpassword.html">Forget Password?</a>
+          </div>
+        </form>
+        <div class="auth__alternative">
+          <p>Don’t have an Account?</p>
+          <a href="/users/register">Sign Up</a>
+        </div>
+      </div>
+    </div>
+ 

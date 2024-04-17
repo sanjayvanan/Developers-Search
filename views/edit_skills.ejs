@@ -1,0 +1,28 @@
+
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="/account/"><i class="im im-angle-left"></i></a>
+            <br>
+
+            <form class="form" method="POST" action="/project/add-skill">
+                <input type="hidden" name="csrfmiddlewaretoken" value="1ZGrJnUtX5gNxv2Lv2ciNp8Cn3HvTlmu5PbIrbEIaNG101s9WvFfOfkwtu9BWYkI">
+
+               
+                <div class="form__field">
+                    <label for="formInput#text"> Name</label>
+                    <input type="text" name="name" maxlength="200" value="<%= skill.name %>"  class="input" id="id_name">
+                </div>
+               
+                <div class="form__field">
+                    <label for="formInput#text"> Description</label>
+                    <textarea name="description" cols="40" rows="10" class="input" value="<%= skill.description %>" id="id_description">
+</textarea>
+                </div>
+               
+
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</main>

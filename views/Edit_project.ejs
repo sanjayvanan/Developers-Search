@@ -1,0 +1,56 @@
+<!-- Main Section -->
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="/account/"><i class="im im-angle-left"></i></a>
+            <br>
+
+            <form class="form" action="/project/edit-project/<%= value._id %>" method="post">
+
+
+               
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">Title</label>
+                    <input type="text" name="title" maxlength="200" class="input" required id="id_title" value="<%= value.title %>">
+                </div>
+               
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">Featured image</label>
+                    <input type="file" name="featured_image" accept="image/*" class="input" id="id_featured_image">
+                </div>
+               
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">Description</label>
+                    <textarea name="description" cols="40" rows="10" class="input" id="id_description" ><%= value.description %>
+</textarea>
+                </div>
+               
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">Demo link</label>
+                    <input type="text" name="demo_link" maxlength="2000" class="input" id="id_demo_link" value="<%= value.demo_link %>">
+                </div>
+               
+                <!-- Input:Text -->
+                <div class="form__field">
+                    <label for="formInput#text">Source link</label>
+                    <input type="text" name="source_link" maxlength="2000" class="input" id="id_source_link" value="<%= value.source_link %>">
+                </div>
+               
+
+                <div class="form__field">
+                   
+                </div>
+
+                <div class="form__field">
+                    <label for="formInput#text">Tags</label>
+                    <textarea class="input" name="tags" placeholder="Add tags here..."><%= value.tags  %></textarea>
+                </div>
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</main>
