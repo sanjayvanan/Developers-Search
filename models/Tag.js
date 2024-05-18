@@ -7,5 +7,6 @@ const tagSchema = new mongoose.Schema({
     created: { type: Date, default: Date.now }
 });
 
+
 const Tag = mongoose.model('Tag', tagSchema);
 module.exports = Tag 
