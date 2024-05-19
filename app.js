@@ -8,6 +8,7 @@ const session = require('express-session');
 const app = express();
 
 // Passport Config
+
 require('./config/passport')(passport);
 
 // DB Config
