@@ -6,8 +6,6 @@ const Skill = require('../models/Skill')
 //mongoose
 const mongoose = require('mongoose');
 
-
-
 //adding skill form page
  
 const addSkill = async(req , res )=>{
@@ -31,13 +29,14 @@ const  createNewSkill=async (req,res)=>{
 
 
 const showEditPage = async (req, res) => {
-    const { id } = req.params;
+    const { id } = req.params.id;
     console.log("ID from params:", id); // Log the value of id to see if it's null or undefined
     Skill.findById(id, (err, value) => {
         if (err) {
             console.log(err);
             return res.send("Error finding the skill");
         }
+        
         
         if (!value) {
             console.log("Skill not found");

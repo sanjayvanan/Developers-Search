@@ -21,7 +21,7 @@ const projectForm = async (req , res) => {
 const createProject = async (req , res) => {
     try {
         const { title, description, demo_link, source_link, tags } = req.body;
-        const owner = req.user._id; // Assuming req.user._id contains the current user's ID
+        const owner = req.user._id; 
 
         // Split tags string into an array
         const tagArray = tags.split(',').map(tag => tag.trim());
